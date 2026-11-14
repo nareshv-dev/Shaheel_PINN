@@ -1,0 +1,43 @@
+{
+  "seed": 42,
+  "input_columns": [
+    "cell_voltage_V",
+    "cell_current_A",
+    "cell_temperature_K",
+    "surface_temperature_K",
+    "soc_proxy",
+    "requested_charge_rate_C",
+    "ambient_temperature_C",
+    "horizon_s"
+  ],
+  "output_columns": [
+    "capacity_retention_soh__future"
+  ],
+  "x_mean": [
+    3.8397042751312256,
+    -1.0764284133911133,
+    313.9313659667969,
+    304.3474426269531,
+    -0.005930383689701557,
+    1.5017750263214111,
+    29.02079963684082,
+    318.4208679199219
+  ],
+  "x_std": [
+    0.2359514832496643,
+    6.10947322845459,
+    9.53470230102539,
+    5.755255699157715,
+    0.08106138557195663,
+    0.6327435374259949,
+    8.015558242797852,
+    220.75888061523438
+  ],
+  "y_mean": [
+    0.9998922944068909
+  ],
+  "y_std": [
+    0.0011747056851163507
+  ],
+  "normalization_split": "train_only"
+}

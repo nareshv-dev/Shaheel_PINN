@@ -1,0 +1,17 @@
+{
+  "current_stage": "03_V1_DigitalTwin_ScenarioDesign",
+  "status": "NOTEBOOK_03_SPECIFICATION_COMPLETE_PENDING_FINAL_GATE",
+  "scientific_validation_claimed": false,
+  "next_notebook": "04_V1_PyBaMM_DataGenerator.ipynb",
+  "forbidden_downstream_name": "04_V1_Physical_Simulator",
+  "handoff_artifacts": {
+    "specification_json": "/content/drive/MyDrive/PINN_EV_Battery/scenario_design/v1_scenario_specification.json",
+    "scenario_matrix": "/content/drive/MyDrive/PINN_EV_Battery/scenario_design/v1_scenario_matrix.csv",
+    "input_spec": "/content/drive/MyDrive/PINN_EV_Battery/scenario_design/v1_input_specification.csv",
+    "output_spec": "/content/drive/MyDrive/PINN_EV_Battery/scenario_design/v1_output_specification.csv",
+    "requirements_status": "/content/drive/MyDrive/PINN_EV_Battery/scenario_design/requirements_status.csv",
+    "validation_report": "/content/drive/MyDrive/PINN_EV_Battery/scenario_design/validation_report.json",
+    "execution_log": "/content/drive/MyDrive/PINN_EV_Battery/scenario_design/execution_log.md",
+    "next_action": "/content/drive/MyDrive/PINN_EV_Battery/scenario_design/NEXT_ACTION.md"
+  }
+}

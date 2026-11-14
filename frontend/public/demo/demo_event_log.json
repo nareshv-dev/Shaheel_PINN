@@ -1,0 +1,50 @@
+[
+  {
+    "timestamp": "2026-11-13T13:22:49",
+    "event_type": "simulation_start",
+    "cell_id": null,
+    "scenario": "S1_HEALTHY",
+    "description": "Pack simulation loaded. S1 Normal Operation.",
+    "source": "simulation_engine"
+  },
+  {
+    "timestamp": "2026-11-13T13:23:12",
+    "event_type": "status_transition",
+    "cell_id": 37,
+    "scenario": "S4_CELL037_BENCH",
+    "description": "Cell 37 transitioned to WATCH. Temperature rising above median.",
+    "source": "signal_detector"
+  },
+  {
+    "timestamp": "2026-11-13T13:24:05",
+    "event_type": "anomaly_detected",
+    "cell_id": 37,
+    "scenario": "S4_CELL037_BENCH",
+    "description": "Cell 37 anomaly score = 7.14 > threshold 4.40. Rank 1.",
+    "source": "signal_detector"
+  },
+  {
+    "timestamp": "2026-11-13T13:25:30",
+    "event_type": "status_transition",
+    "cell_id": 37,
+    "scenario": "S5_CELL037_BENCH",
+    "description": "Cell 37 upgraded to WARNING. Combined high-risk scenario active.",
+    "source": "signal_detector"
+  },
+  {
+    "timestamp": "2026-11-13T13:26:00",
+    "event_type": "intervention_recommendation",
+    "cell_id": 37,
+    "scenario": "S6_S5_CELL037_BENCH_1p0C",
+    "description": "BMS recommendation: Derate charge rate from 2.0C to 1.0C for Cell 37.",
+    "source": "bms_decision_support"
+  },
+  {
+    "timestamp": "2026-11-13T13:26:45",
+    "event_type": "scenario_change",
+    "cell_id": null,
+    "scenario": "S6_S5_CELL037_BENCH_1p0C",
+    "description": "Intervention scenario applied: 1.0C candidate rate.",
+    "source": "scenario_manager"
+  }
+]

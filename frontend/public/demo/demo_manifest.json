@@ -1,0 +1,49 @@
+{
+  "export_date": "2026-11-13",
+  "demo_scenario_primary": "S5_CELL037_BENCH",
+  "cell_timeseries_target_cells": [
+    1,
+    37,
+    55,
+    82
+  ],
+  "cell_timeseries_scenarios": [
+    "S1_HEALTHY",
+    "S4_CELL037_BENCH",
+    "S5_CELL037_BENCH"
+  ],
+  "max_rows_per_cell_scenario": 300,
+  "sources": {
+    "cell_timeseries": "e:\\Naresh_Projects\\pinn_project\\PINN_EV_BATTERY_PROJECT\\cell_timeseries.csv",
+    "particle_profiles": "e:\\Naresh_Projects\\pinn_project\\PINN_EV_BATTERY_PROJECT\\particle_profiles.csv",
+    "scenario_instances": "e:\\Naresh_Projects\\pinn_project\\PINN_EV_BATTERY_PROJECT\\scenario_instances.csv",
+    "localization": "e:\\Naresh_Projects\\pinn_project\\PINN_EV_BATTERY_PROJECT\\08_family_holdout_cell_predictions.csv",
+    "pinn_predictions_seed11": "e:\\Naresh_Projects\\pinn_project\\PINN_EV_BATTERY_PROJECT\\predictions_proposed_pc-mp-pinn_seed_11.csv",
+    "pinn_predictions_seed22": "e:\\Naresh_Projects\\pinn_project\\PINN_EV_BATTERY_PROJECT\\predictions_proposed_pc-mp-pinn_seed_22.csv",
+    "pinn_predictions_seed33": "e:\\Naresh_Projects\\pinn_project\\PINN_EV_BATTERY_PROJECT\\predictions_proposed_pc-mp-pinn_seed_33.csv",
+    "s6_interventions": "e:\\Naresh_Projects\\pinn_project\\PINN_EV_BATTERY_PROJECT\\s6_intervention_summary.csv"
+  },
+  "source_hashes_md5_1mb": {
+    "scenario_instances": "3de69b1f711237162d0f8ad920719fde",
+    "s6_interventions": "8dcc2a673aef7029285ae5f4c6dbe2f3"
+  },
+  "pc_mp_pinn_invalid_rows_excluded": 6210,
+  "detector_threshold_family_holdout": 4.399034460052955,
+  "known_limitations": [
+    "Notebook 04 physical SOC validation remains unresolved.",
+    "B1/B3 model contracts have unresolved input-dimension differences.",
+    "PC-MP-PINN is a single-cell model; not independently applied to all 100 cells.",
+    "Early-warning lead time not validated (no fault-onset timestamps).",
+    "Signal detector is separate from PINN future-SOH predictor."
+  ],
+  "output_files": [
+    "demo_cell_predictions.csv",
+    "demo_cell_timeseries.csv",
+    "demo_localization.csv",
+    "demo_particle_profiles.csv",
+    "demo_event_log.json",
+    "demo_interventions.json",
+    "demo_pack_snapshot.json",
+    "demo_scenarios.json"
+  ]
+}

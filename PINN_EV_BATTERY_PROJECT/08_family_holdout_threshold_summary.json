@@ -1,0 +1,137 @@
+{
+  "notebook": "08_Family_HeldOut_Threshold_Calibration_Evaluation",
+  "status": "COMPLETED_WITH_LIMITATIONS",
+  "scenario_count": 28,
+  "family_count": 13,
+  "score_row_count": 2800,
+  "threshold_calibration": {
+    "threshold": 4.399034460052955,
+    "rule": "midpoint(max training healthy score, min training faulty score)",
+    "max_training_healthy_score": 1.655211777248763,
+    "min_training_fault_score": 7.142857142857148,
+    "training_separation_gap": 5.487645365608385,
+    "training_perfect_separation": true,
+    "threshold_calibrated_using_training_families_only": true,
+    "split_source": "rebuilt deterministic family-level split",
+    "seed": 20261014
+  },
+  "split_source": "rebuilt deterministic family-level split",
+  "split_overview": [
+    {
+      "evaluation_split": "test",
+      "scenarios": 8,
+      "families": 3,
+      "healthy_scenarios": 1,
+      "fault_scenarios": 7
+    },
+    {
+      "evaluation_split": "train",
+      "scenarios": 17,
+      "families": 7,
+      "healthy_scenarios": 1,
+      "fault_scenarios": 16
+    },
+    {
+      "evaluation_split": "val",
+      "scenarios": 3,
+      "families": 3,
+      "healthy_scenarios": 1,
+      "fault_scenarios": 2
+    }
+  ],
+  "metrics_by_split": [
+    {
+      "split": "train",
+      "families": 7,
+      "scenarios": 17,
+      "healthy_scenarios": 1,
+      "fault_scenarios": 16,
+      "cells": 1700,
+      "TP": 22,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1678,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "F1": 1.0
+    },
+    {
+      "split": "val",
+      "families": 3,
+      "scenarios": 3,
+      "healthy_scenarios": 1,
+      "fault_scenarios": 2,
+      "cells": 300,
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 298,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "F1": 1.0
+    },
+    {
+      "split": "test",
+      "families": 3,
+      "scenarios": 8,
+      "healthy_scenarios": 1,
+      "fault_scenarios": 7,
+      "cells": 800,
+      "TP": 7,
+      "FP": 0,
+      "FN": 0,
+      "TN": 793,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "F1": 1.0
+    }
+  ],
+  "test_metrics": {
+    "split": "test",
+    "families": 3,
+    "scenarios": 8,
+    "healthy_scenarios": 1,
+    "fault_scenarios": 7,
+    "cells": 800,
+    "TP": 7,
+    "FP": 0,
+    "FN": 0,
+    "TN": 793,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "F1": 1.0
+  },
+  "checks": {
+    "unique_scenario_metadata_ids": true,
+    "all_score_scenarios_have_metadata": true,
+    "all_scored_scenarios_have_100_cells": true,
+    "no_train_test_family_overlap": true,
+    "no_train_validation_family_overlap": true,
+    "no_validation_test_family_overlap": true,
+    "training_contains_healthy_cells": true,
+    "training_contains_faulty_cells": true,
+    "test_contains_healthy_scenarios": true,
+    "test_contains_fault_scenarios": true,
+    "threshold_uses_train_only": true,
+    "fault_onset_timestamps_available": false
+  },
+  "limitations": [
+    "Simulated/project dataset; not independent real-world vehicle validation.",
+    "Generalization claims require genuinely distinct held-out fault families.",
+    "Specificity is not established if test has no healthy scenarios.",
+    "Early-warning lead time is not measured without fault-onset timestamps.",
+    "This signal detector is separate from the PINN future-SOH localization method.",
+    "No operational battery-safety threshold is validated by this notebook."
+  ],
+  "outputs": {
+    "metrics_csv": "/content/drive/MyDrive/PINN_EV_Battery/results_v1_localization/08_family_holdout_threshold_metrics.csv",
+    "scenario_details_csv": "/content/drive/MyDrive/PINN_EV_Battery/results_v1_localization/08_family_holdout_scenario_details.csv",
+    "family_split_manifest_csv": "/content/drive/MyDrive/PINN_EV_Battery/results_v1_localization/08_family_holdout_split_manifest.csv",
+    "cell_predictions_csv": "/content/drive/MyDrive/PINN_EV_Battery/results_v1_localization/08_family_holdout_cell_predictions.csv",
+    "summary_json": "/content/drive/MyDrive/PINN_EV_Battery/results_v1_localization/08_family_holdout_threshold_summary.json"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "notebook": "06_V1_PINN_Training_ModelValidation.ipynb",
+  "status": "PASS",
+  "seed": 42,
+  "device": "cuda",
+  "torch_version": "2.11.0+cu128",
+  "input_columns": [
+    "cell_voltage_V",
+    "cell_current_A",
+    "cell_temperature_K",
+    "surface_temperature_K",
+    "soc_proxy",
+    "requested_charge_rate_C",
+    "ambient_temperature_C"
+  ],
+  "output_columns": [
+    "capacity_retention_soh__future"
+  ],
+  "prediction_horizons_seconds": [
+    60.0,
+    300.0,
+    600.0
+  ],
+  "batch_size": 4096,
+  "epochs_requested": {
+    "B1": 40,
+    "B3": 50
+  },
+  "physics_weight": 0.01,
+  "data_policy": {
+    "source": "PyBaMM reference/simulation data",
+    "fault_location_used_as_input": false,
+    "train_val_test_split": "scenario-instance level",
+    "raw_cell_timeseries_loaded_entirely": false
+  },
+  "checks": {
+    "nb05_pass": true,
+    "supervised_table_nonempty": true,
+    "train_present": true,
+    "val_present": true,
+    "test_present": true,
+    "all_horizons_present": true,
+    "b1_checkpoint_exists": true,
+    "b3_checkpoint_exists": true,
+    "metrics_written": true,
+    "physics_audit_written": true,
+    "no_fault_location_input": true,
+    "safety_thresholds_not_claimed": true
+  }
+}

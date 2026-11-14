@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battery Pack Digital Twin — PINN Live</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">PT</div>
+    <div class="brand-text">
+      <div class="brand-title">PINN Digital Twin</div>
+      <div class="brand-sub">100-cell EV battery pack · live multi-physics inference</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <label class="field">
+      <span>Scenario</span>
+      <select id="scenarioSelect"></select>
+    </label>
+    <button id="playBtn" class="btn btn-primary">Pause</button>
+    <label class="field">
+      <span>Speed</span>
+      <input type="range" id="speedSlider" min="0.25" max="6" step="0.25" value="1">
+      <span id="speedLabel">1.0x</span>
+    </label>
+    <button id="resetBtn" class="btn btn-ghost">Reset</button>
+  </div>
+</header>
+
+<div class="status-strip" id="statusStrip">
+  <div class="status-item">
+    <span class="status-label">Sim time</span>
+    <span class="status-value" id="simTime">0.0 s</span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">Cycle</span>
+    <span class="status-value" id="cycleCount">0</span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">Scenario</span>
+    <span class="status-value" id="scenarioName">—</span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">Pack median T</span>
+    <span class="status-value" id="medianT">—</span>
+  </div>
+  <div class="status-item" id="interventionBadgeWrap" hidden>
+    <span class="pill pill-intervention">BMS INTERVENTION ACTIVE — Cell 37 current derated</span>
+  </div>
+</div>
+
+<main class="layout">
+
+  <section class="panel grid-panel">
+    <div class="panel-head">
+      <h2>Pack grid</h2>
+      <div class="legend">
+        <span class="legend-item"><i class="dot dot-normal"></i>Normal</span>
+        <span class="legend-item"><i class="dot dot-watch"></i>Watch</span>
+        <span class="legend-item"><i class="dot dot-warning"></i>Warning</span>
+        <span class="legend-item"><i class="dot dot-critical"></i>Critical</span>
+      </div>
+    </div>
+    <div id="packGrid" class="pack-grid"></div>
+    <p class="hint">Click any cell to inspect its live PINN output. Cell 37 is the designated degraded candidate.</p>
+  </section>
+
+  <section class="panel detail-panel">
+    <div class="panel-head">
+      <h2>Cell <span id="selectedCellId">37</span> — live trace</h2>
+      <div class="cell-meta" id="cellMeta"></div>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-box">
+        <div class="chart-title">Temperature (°C)</div>
+        <canvas id="chartTemp" height="120"></canvas>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">Tangential stress (MPa)</div>
+        <canvas id="chartStress" height="120"></canvas>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">Surface concentration (%)</div>
+        <canvas id="chartConc" height="120"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel warning-panel">
+    <div class="panel-head">
+      <h2>Early-warning ranking</h2>
+    </div>
+    <p class="hint">Cells ranked by temperature deviation from the pack median — the same localization heuristic as the early-warning notebook, run live on PINN output.</p>
+    <table class="rank-table" id="rankTable">
+      <thead><tr><th>Rank</th><th>Cell</th><th>Deviation</th><th>Risk</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="panel events-panel">
+    <div class="panel-head">
+      <h2>Event log</h2>
+    </div>
+    <div class="event-log" id="eventLog"></div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

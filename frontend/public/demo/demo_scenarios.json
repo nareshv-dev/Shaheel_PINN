@@ -1,0 +1,210 @@
+[
+  {
+    "scenario_id": "S1",
+    "sub_id": "BASE",
+    "name": "Normal Operation",
+    "ambient_temp_c": 25.0,
+    "charge_rate_c": 1.0,
+    "initial_soc": 0.2,
+    "degradation_state": "healthy",
+    "purpose": "Evaluate health/state of every cell and establish the healthy reference distribution.",
+    "instances": [
+      "S1_HEALTHY"
+    ]
+  },
+  {
+    "scenario_id": "S2",
+    "sub_id": "BASE",
+    "name": "High Charging Stress",
+    "ambient_temp_c": 25.0,
+    "charge_rate_c": 2.5,
+    "initial_soc": 0.2,
+    "degradation_state": "healthy",
+    "purpose": "Evaluate every cell for electrical/thermal/state deviation rather than assuming a predetermined fault location.",
+    "instances": [
+      "S2_HEALTHY"
+    ]
+  },
+  {
+    "scenario_id": "S3",
+    "sub_id": "BASE",
+    "name": "High Ambient Temperature",
+    "ambient_temp_c": 45.0,
+    "charge_rate_c": 1.0,
+    "initial_soc": 0.2,
+    "degradation_state": "healthy",
+    "purpose": "Evaluate whether any subset of cells develops abnormal thermal/electrical state under elevated ambient conditions.",
+    "instances": [
+      "S3_HEALTHY"
+    ]
+  },
+  {
+    "scenario_id": "S4",
+    "sub_id": "BASE",
+    "name": "Localized Degradation Detection",
+    "ambient_temp_c": 25.0,
+    "charge_rate_c": 1.0,
+    "initial_soc": 0.2,
+    "degradation_state": "cell_specific_and_declared_per_run",
+    "purpose": "Identify which cell or cells deviate from the validated healthy reference without assuming Cell 37.",
+    "instances": [
+      "S4_CELL004",
+      "S4_CELL019",
+      "S4_CELL055",
+      "S4_CELL037_BENCH",
+      "S4_CELL082"
+    ]
+  },
+  {
+    "scenario_id": "S5",
+    "sub_id": "BASE",
+    "name": "Combined High-Risk Scenario",
+    "ambient_temp_c": 45.0,
+    "charge_rate_c": 2.0,
+    "initial_soc": 0.2,
+    "degradation_state": "cell_specific_and_declared_per_run",
+    "purpose": "Localize defective cells, currently affected cells, and potentially affected cells from whole-pack multi-physics evidence.",
+    "instances": [
+      "S5_CELL004",
+      "S5_CELL073",
+      "S5_CELL037_BENCH",
+      "S5_CELL091",
+      "S5_CELL004_082"
+    ]
+  },
+  {
+    "scenario_id": "S6",
+    "sub_id": "CANDIDATE_2.0C",
+    "name": "Intervention Sweep (2.0C)",
+    "ambient_temp_c": 45.0,
+    "charge_rate_c": 2.0,
+    "initial_soc": 0.2,
+    "degradation_state": "cell_specific_and_declared_per_run",
+    "purpose": "Evaluate whole-pack per-cell trajectories and localization under 2.0C intervention",
+    "instances": [
+      "S6_S5_CELL037_BENCH_2p0C",
+      "S6_S5_CELL037_BENCH_1p5C",
+      "S6_S5_CELL037_BENCH_1p0C",
+      "S6_S5_CELL037_BENCH_0p8C",
+      "S6_S5_CELL037_BENCH_0p4C",
+      "S6_S5_CELL091_2p0C",
+      "S6_S5_CELL091_1p5C",
+      "S6_S5_CELL091_1p0C",
+      "S6_S5_CELL091_0p8C",
+      "S6_S5_CELL091_0p4C",
+      "S6_S5_CELL004_082_2p0C",
+      "S6_S5_CELL004_082_1p5C",
+      "S6_S5_CELL004_082_1p0C",
+      "S6_S5_CELL004_082_0p8C",
+      "S6_S5_CELL004_082_0p4C"
+    ]
+  },
+  {
+    "scenario_id": "S6",
+    "sub_id": "CANDIDATE_1.5C",
+    "name": "Intervention Sweep (1.5C)",
+    "ambient_temp_c": 45.0,
+    "charge_rate_c": 1.5,
+    "initial_soc": 0.2,
+    "degradation_state": "cell_specific_and_declared_per_run",
+    "purpose": "Evaluate whole-pack per-cell trajectories and localization under 1.5C intervention",
+    "instances": [
+      "S6_S5_CELL037_BENCH_2p0C",
+      "S6_S5_CELL037_BENCH_1p5C",
+      "S6_S5_CELL037_BENCH_1p0C",
+      "S6_S5_CELL037_BENCH_0p8C",
+      "S6_S5_CELL037_BENCH_0p4C",
+      "S6_S5_CELL091_2p0C",
+      "S6_S5_CELL091_1p5C",
+      "S6_S5_CELL091_1p0C",
+      "S6_S5_CELL091_0p8C",
+      "S6_S5_CELL091_0p4C",
+      "S6_S5_CELL004_082_2p0C",
+      "S6_S5_CELL004_082_1p5C",
+      "S6_S5_CELL004_082_1p0C",
+      "S6_S5_CELL004_082_0p8C",
+      "S6_S5_CELL004_082_0p4C"
+    ]
+  },
+  {
+    "scenario_id": "S6",
+    "sub_id": "CANDIDATE_1.0C",
+    "name": "Intervention Sweep (1.0C)",
+    "ambient_temp_c": 45.0,
+    "charge_rate_c": 1.0,
+    "initial_soc": 0.2,
+    "degradation_state": "cell_specific_and_declared_per_run",
+    "purpose": "Evaluate whole-pack per-cell trajectories and localization under 1.0C intervention",
+    "instances": [
+      "S6_S5_CELL037_BENCH_2p0C",
+      "S6_S5_CELL037_BENCH_1p5C",
+      "S6_S5_CELL037_BENCH_1p0C",
+      "S6_S5_CELL037_BENCH_0p8C",
+      "S6_S5_CELL037_BENCH_0p4C",
+      "S6_S5_CELL091_2p0C",
+      "S6_S5_CELL091_1p5C",
+      "S6_S5_CELL091_1p0C",
+      "S6_S5_CELL091_0p8C",
+      "S6_S5_CELL091_0p4C",
+      "S6_S5_CELL004_082_2p0C",
+      "S6_S5_CELL004_082_1p5C",
+      "S6_S5_CELL004_082_1p0C",
+      "S6_S5_CELL004_082_0p8C",
+      "S6_S5_CELL004_082_0p4C"
+    ]
+  },
+  {
+    "scenario_id": "S6",
+    "sub_id": "CANDIDATE_0.8C",
+    "name": "Intervention Sweep (0.8C)",
+    "ambient_temp_c": 45.0,
+    "charge_rate_c": 0.8,
+    "initial_soc": 0.2,
+    "degradation_state": "cell_specific_and_declared_per_run",
+    "purpose": "Evaluate whole-pack per-cell trajectories and localization under 0.8C intervention",
+    "instances": [
+      "S6_S5_CELL037_BENCH_2p0C",
+      "S6_S5_CELL037_BENCH_1p5C",
+      "S6_S5_CELL037_BENCH_1p0C",
+      "S6_S5_CELL037_BENCH_0p8C",
+      "S6_S5_CELL037_BENCH_0p4C",
+      "S6_S5_CELL091_2p0C",
+      "S6_S5_CELL091_1p5C",
+      "S6_S5_CELL091_1p0C",
+      "S6_S5_CELL091_0p8C",
+      "S6_S5_CELL091_0p4C",
+      "S6_S5_CELL004_082_2p0C",
+      "S6_S5_CELL004_082_1p5C",
+      "S6_S5_CELL004_082_1p0C",
+      "S6_S5_CELL004_082_0p8C",
+      "S6_S5_CELL004_082_0p4C"
+    ]
+  },
+  {
+    "scenario_id": "S6",
+    "sub_id": "CANDIDATE_0.4C",
+    "name": "Intervention Sweep (0.4C)",
+    "ambient_temp_c": 45.0,
+    "charge_rate_c": 0.4,
+    "initial_soc": 0.2,
+    "degradation_state": "cell_specific_and_declared_per_run",
+    "purpose": "Evaluate whole-pack per-cell trajectories and localization under 0.4C intervention",
+    "instances": [
+      "S6_S5_CELL037_BENCH_2p0C",
+      "S6_S5_CELL037_BENCH_1p5C",
+      "S6_S5_CELL037_BENCH_1p0C",
+      "S6_S5_CELL037_BENCH_0p8C",
+      "S6_S5_CELL037_BENCH_0p4C",
+      "S6_S5_CELL091_2p0C",
+      "S6_S5_CELL091_1p5C",
+      "S6_S5_CELL091_1p0C",
+      "S6_S5_CELL091_0p8C",
+      "S6_S5_CELL091_0p4C",
+      "S6_S5_CELL004_082_2p0C",
+      "S6_S5_CELL004_082_1p5C",
+      "S6_S5_CELL004_082_1p0C",
+      "S6_S5_CELL004_082_0p8C",
+      "S6_S5_CELL004_082_0p4C"
+    ]
+  }
+]

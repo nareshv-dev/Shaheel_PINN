@@ -1,0 +1,23 @@
+{
+  "notebook": "04_V1_PyBaMM_DataGenerator_FINAL_CLEAN",
+  "run_mode": "FULL",
+  "seed": 20260926,
+  "pybamm_version": "26.4.2",
+  "parameter_set": "OKane2022",
+  "pack_topology": "100S1P_ABSTRACTION",
+  "number_of_cells": 100,
+  "s6_rates_C": [
+    2.0,
+    1.5,
+    1.0,
+    0.8,
+    0.4
+  ],
+  "degradation_parameter_multipliers_used": false,
+  "risk_thresholds_validated": false,
+  "risk_threshold_status": "UNRESOLVED_UNTIL_VALIDATED",
+  "stress_source": "analytical_spherical_stress_from_PyBaMM_negative_particle_concentration",
+  "fault_location_in_model_facing_tables": false,
+  "cell37_role": "controlled benchmark only",
+  "note": "100-cell pack is a common-current software abstraction, not a coupled electrical-network solver."
+}

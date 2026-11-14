@@ -1,0 +1,16 @@
+{
+  "notebook": "03_V1_DigitalTwin_ScenarioDesign",
+  "positive_validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": []
+  },
+  "negative_test_count": 42,
+  "negative_tests_all_rejected": true,
+  "v0_lineage_status": "VERIFIED",
+  "scientific_validation_claimed": false,
+  "whole_pack_localization": true,
+  "cell37_is_benchmark_only": true,
+  "random_fault_assignment": false,
+  "timestamp_utc": "2026-09-26T16:44:21.131511+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "architecture": "PredictiveMLP",
+  "input_columns": [
+    "cell_voltage_V",
+    "cell_current_A",
+    "cell_temperature_K",
+    "surface_temperature_K",
+    "soc_proxy",
+    "requested_charge_rate_C",
+    "ambient_temperature_C",
+    "horizon_s"
+  ],
+  "output_columns": [
+    "capacity_retention_soh__future"
+  ],
+  "input_dimension": 8,
+  "output_dimension": 1,
+  "width": 128,
+  "depth": 3,
+  "dropout": 0.0,
+  "device": "cuda",
+  "seed": 42,
+  "important_note": "horizon_s is an explicit predictive input for multi-horizon forecasting."
+}

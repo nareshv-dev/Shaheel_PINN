@@ -1,0 +1,8 @@
+{
+  "threshold": 5.0251890763030245,
+  "selection_method": "midpoint between maximum non-fault and minimum faulty training scores",
+  "calibration_split": "train",
+  "validation_used_for_threshold_selection": false,
+  "test_used_for_threshold_selection": false,
+  "warning": "Test scenarios share some fault families with training. This is not a fully independent unseen-fault-family test."
+}

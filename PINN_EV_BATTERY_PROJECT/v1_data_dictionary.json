@@ -1,0 +1,339 @@
+{
+  "source": "Notebook 04 generated artifacts",
+  "generated_by": "Notebook 05 provenance repair",
+  "files": {
+    "cell_timeseries": {
+      "filename": "cell_timeseries.csv",
+      "columns": [
+        {
+          "name": "scenario_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "scenario_instance_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "data_split",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "pack_topology",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "cell_id",
+          "dtype_sample": "int64"
+        },
+        {
+          "name": "state_kind",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "ageing_cycles",
+          "dtype_sample": "int64"
+        },
+        {
+          "name": "ambient_temperature_C",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "requested_charge_rate_C",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "conditioning_duration_s",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "time_s",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "cell_voltage_V",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "cell_current_A",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "cell_temperature_K",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "surface_temperature_K",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "ambient_temperature_K",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "soc_proxy",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "negative_particle_concentration_mean_mol_m3",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "positive_particle_concentration_mean_mol_m3",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "electrolyte_concentration_xavg_mol_m3",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "capacity_Ah_reference_test",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "capacity_retention_soh",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "dc_pulse_resistance_proxy_ohm",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "resistance_proxy_multiplier",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "pybamm_resistance_proxy_ohm",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "neg_sei_thickness",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "neg_crack_length",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "lam_negative",
+          "dtype_sample": "float64"
+        }
+      ]
+    },
+    "particle_profiles": {
+      "filename": "particle_profiles.csv",
+      "columns": [
+        {
+          "name": "scenario_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "scenario_instance_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "data_split",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "pack_topology",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "cell_id",
+          "dtype_sample": "int64"
+        },
+        {
+          "name": "state_kind",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "time_s",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "time_normalized",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "radial_position_normalized",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "radial_position_m",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "negative_particle_concentration",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "negative_radial_stress",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "negative_tangential_stress",
+          "dtype_sample": "float64"
+        }
+      ]
+    },
+    "pack_timeseries": {
+      "filename": "pack_timeseries.csv",
+      "columns": [
+        {
+          "name": "scenario_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "scenario_instance_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "data_split",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "pack_topology",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "cell_id",
+          "dtype_sample": "int64"
+        },
+        {
+          "name": "time_s",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "pack_voltage_V",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "pack_current_A",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "cell_voltage_V_interp",
+          "dtype_sample": "float64"
+        }
+      ]
+    },
+    "scenario_instances": {
+      "filename": "scenario_instances.csv",
+      "columns": [
+        {
+          "name": "scenario_instance_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "scenario_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "split",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "pack_topology",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "cell_count",
+          "dtype_sample": "int64"
+        },
+        {
+          "name": "fault_cells_json",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "fault_count",
+          "dtype_sample": "int64"
+        },
+        {
+          "name": "fault_location_is_hidden_to_model",
+          "dtype_sample": "bool"
+        },
+        {
+          "name": "cell37_is_benchmark",
+          "dtype_sample": "bool"
+        },
+        {
+          "name": "healthy_reference_required",
+          "dtype_sample": "bool"
+        },
+        {
+          "name": "degradation_ground_truth_source",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "degradation_parameter_multipliers_used",
+          "dtype_sample": "bool"
+        },
+        {
+          "name": "threshold_status",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "localization_status",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "base_scenario_instance_id",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "candidate_charge_rate_C",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "winner_preselected",
+          "dtype_sample": "float64"
+        }
+      ]
+    },
+    "s6_intervention_summary": {
+      "filename": "s6_intervention_summary.csv",
+      "columns": [
+        {
+          "name": "scenario_instance_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "scenario_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "base_scenario_instance_id",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "candidate_charge_rate_C",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "fault_cells_json",
+          "dtype_sample": "object"
+        },
+        {
+          "name": "cells_scanned",
+          "dtype_sample": "int64"
+        },
+        {
+          "name": "winner_preselected",
+          "dtype_sample": "bool"
+        },
+        {
+          "name": "max_pack_voltage_V",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "min_pack_voltage_V",
+          "dtype_sample": "float64"
+        },
+        {
+          "name": "max_abs_current_A",
+          "dtype_sample": "float64"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "detector": "Signal-statistics anomaly detector",
+  "status": "EXPLORATORY_HELD_OUT_INSTANCE_EVALUATION",
+  "score_source": "07_signal_localization_diagnostic.csv",
+  "threshold": 5.0251890763030245,
+  "threshold_selection_method": "midpoint between maximum non-fault and minimum faulty training scores",
+  "threshold_calibration_split": "train",
+  "test_cell_level": {
+    "TP": 26,
+    "FP": 0,
+    "FN": 0,
+    "TN": 1974,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "f1": 1.0
+  },
+  "test_scenario_level": {
+    "total_scenarios": 20,
+    "fault_scenarios": 20,
+    "fault_scenarios_with_all_faults_detected": 20,
+    "healthy_scenarios": 0,
+    "healthy_scenarios_without_false_alarms": 0
+  },
+  "limitations": [
+    "Results apply to this generated dataset and its current scenario splits.",
+    "Test scenarios include charge-rate variations of existing fault families.",
+    "Performance on completely unseen fault families has not been established.",
+    "The signal-statistics detector is separate from the trained PINN SOH predictor.",
+    "Early-warning lead time is not validated without fault-onset timestamps.",
+    "These results do not establish real-world battery safety or deployment readiness."
+  ]
+}

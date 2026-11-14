@@ -1,0 +1,72 @@
+[
+  {
+    "scenario_instance_id": "S6_S5_CELL037_BENCH_2p0C",
+    "base_scenario": "S5_CELL037_BENCH",
+    "candidate_charge_rate_C": 2.0,
+    "fault_cells": [
+      37
+    ],
+    "max_pack_voltage_V": 419.1895422252848,
+    "min_pack_voltage_V": 336.6855059272287,
+    "max_abs_current_A": 10.0,
+    "avg_cell_voltage_V": 4.1919,
+    "est_peak_temp_K": 329.23,
+    "source": "s6_intervention_summary.csv (measured pack voltages; temp is physics-estimated)"
+  },
+  {
+    "scenario_instance_id": "S6_S5_CELL037_BENCH_1p5C",
+    "base_scenario": "S5_CELL037_BENCH",
+    "candidate_charge_rate_C": 1.5,
+    "fault_cells": [
+      37
+    ],
+    "max_pack_voltage_V": 419.2882580070623,
+    "min_pack_voltage_V": 336.7941117128058,
+    "max_abs_current_A": 7.5,
+    "avg_cell_voltage_V": 4.1929,
+    "est_peak_temp_K": 325.56,
+    "source": "s6_intervention_summary.csv (measured pack voltages; temp is physics-estimated)"
+  },
+  {
+    "scenario_instance_id": "S6_S5_CELL037_BENCH_1p0C",
+    "base_scenario": "S5_CELL037_BENCH",
+    "candidate_charge_rate_C": 1.0,
+    "fault_cells": [
+      37
+    ],
+    "max_pack_voltage_V": 419.35505917567247,
+    "min_pack_voltage_V": 336.48005239501225,
+    "max_abs_current_A": 5.0,
+    "avg_cell_voltage_V": 4.1936,
+    "est_peak_temp_K": 322.35,
+    "source": "s6_intervention_summary.csv (measured pack voltages; temp is physics-estimated)"
+  },
+  {
+    "scenario_instance_id": "S6_S5_CELL037_BENCH_0p8C",
+    "base_scenario": "S5_CELL037_BENCH",
+    "candidate_charge_rate_C": 0.8,
+    "fault_cells": [
+      37
+    ],
+    "max_pack_voltage_V": 419.4168206694695,
+    "min_pack_voltage_V": 336.949938304059,
+    "max_abs_current_A": 5.0,
+    "avg_cell_voltage_V": 4.1942,
+    "est_peak_temp_K": 321.22,
+    "source": "s6_intervention_summary.csv (measured pack voltages; temp is physics-estimated)"
+  },
+  {
+    "scenario_instance_id": "S6_S5_CELL037_BENCH_0p4C",
+    "base_scenario": "S5_CELL037_BENCH",
+    "candidate_charge_rate_C": 0.4,
+    "fault_cells": [
+      37
+    ],
+    "max_pack_voltage_V": 419.6648049065836,
+    "min_pack_voltage_V": 337.26628749753974,
+    "max_abs_current_A": 5.0,
+    "avg_cell_voltage_V": 4.1966,
+    "est_peak_temp_K": 319.31,
+    "source": "s6_intervention_summary.csv (measured pack voltages; temp is physics-estimated)"
+  }
+]
